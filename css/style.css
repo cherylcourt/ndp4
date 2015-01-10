@@ -4,6 +4,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: none;
 }
+
 body {
   margin: 0;
   font-size: 14px;
@@ -18,14 +19,18 @@ a:visited { color: #61C; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { color: #c00; outline: 0; }
 
-b, strong { font-weight: bold; }
-pre, code { font-family: monospace, monospace; font-size: 1em; }
 ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
-img { border: 0; max-width: 100%; }
 
-header, footer, .container { max-width: 45em; margin: 0 auto; }
+header, footer, .container {
+  max-width: 45em;
+  margin: 0 auto;
+  padding: 0 0.5em;
+}
 
-header { padding: 0 0.5em; color: #C90B0B; }
+header {
+  color: #C90B0B;
+}
+
 header img { border-radius: 40px; float: left; }
 header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
 header p span { font-size: 0.8em; font-weight: normal;}
@@ -41,9 +46,9 @@ li img { float:left; padding-right: 1em; }
 li p { font-size: 0.9em; font-style: italic; }
 
 footer {
-  padding: 0 0.5em;
   border-top: 1px solid #ccc;
 }
+
 footer span { float: right; font-style: italic; }
 
 /* Smartphones (portrait) */
