@@ -9,9 +9,9 @@ body {
   font-size: 14px;
   line-height: 1.61;
   font-weight: 400;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #333;
 }
-
-body, button, input, select, textarea { font-family: Verdana, Geneva, sans-serif; color: #333; }
 
 a { color: #12C; }
 a:visited { color: #61C; }
