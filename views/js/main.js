@@ -288,6 +288,7 @@ function generator(adj, noun) {
   var adjectives = getAdj(adj);
   var nouns = getNoun(noun);
   var randomAdjective = parseInt(Math.random() * adjectives.length);
+  var randomNoun = parseInt(Math.random() * nouns.length);
   return "The " + adjectives[randomAdjective].capitalize() + " " + nouns[randomNoun].capitalize();
 }
 
