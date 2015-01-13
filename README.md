@@ -1,28 +1,29 @@
 # Website Performance Optimization portfolio project
 
+The page is hosted on github.com [here](http://cherylcourt.github.io/ndp4/)
 
 
 References
 ==========
 
 ### Websites
-http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/
-https://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1
-https://developer.mozilla.org/en-US/docs/Web/API/Element.classList
-http://stackoverflow.com/questions/18964267/fixing-jank-on-movement-locked-to-scroll-on-android
-http://jankfree.org/
-http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/
-http://www.html5rocks.com/en/tutorials/speed/scrolling/
-http://gent.ilcore.com/2011/03/how-not-to-trigger-layout-in-webkit.html
-http://www.html5rocks.com/en/tutorials/speed/rendering/
+* http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/
+* https://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1
+* https://developer.mozilla.org/en-US/docs/Web/API/Element.classList
+* http://stackoverflow.com/questions/18964267/fixing-jank-on-movement-locked-to-scroll-on-android
+* http://jankfree.org/
+* http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/
+* http://www.html5rocks.com/en/tutorials/speed/scrolling/
+* http://gent.ilcore.com/2011/03/how-not-to-trigger-layout-in-webkit.html
+* http://www.html5rocks.com/en/tutorials/speed/rendering/
 
-http://gruntjs.com/getting-started#preparing-a-new-grunt-project
-https://github.com/keithamus/npm-scripts-example/blob/master/package.json
-https://www.jetbrains.com/pycharm/webhelp/using-grunt-task-runner.html
-https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
+* http://gruntjs.com/getting-started#preparing-a-new-grunt-project
+* https://github.com/keithamus/npm-scripts-example/blob/master/package.json
+* https://www.jetbrains.com/pycharm/webhelp/using-grunt-task-runner.html
+* https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 
-piazza forum
-Udacity Course: Website Performance Optimization
+* piazza forum
+* Udacity Course: Website Performance Optimization
 
 Original Instructions
 =====================
