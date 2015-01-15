@@ -25,6 +25,7 @@ References
 ## Other Resources
 * piazza forum
 * Udacity Course: Website Performance Optimization
+* Stack Overflow
 
 Original Instructions
 =====================
