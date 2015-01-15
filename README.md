@@ -1,6 +1,47 @@
 # Website Performance Optimization portfolio project
 
-The page is hosted on github.com [here](http://cherylcourt.github.io/ndp4/)
+Usage
+=====
+1. Clone this repository
+2. Navigate to your local copy of index.html through your web browser 
+(note: this has only been tested in Chrome - Version 39.0.2171.95 (64-bit))
+
+**OR**
+
+Navigate to page hosted on github.com [here](http://cherylcourt.github.io/ndp4/)
+
+
+Optimizations
+=============
+
+index.html
+----------
+* removed what I thought were redundant styles in main.css like the following:
+> b, strong { font-weight: bold; }
+> pre, code { font-family: monospace, monospace; font-size: 1em; }
+* combined css elements, where possible
+* inlined css into html pages
+* scaled images to their view sizes
+* optimized images to reduce their file size
+* made analytics script loading asynchronous
+* added a media attribute to print.css
+
+* TODO: minify html
+* TODO: minify print.css
+
+views/js/main.js
+----------------
+For changing pizza image sizes:
+* instead of calculating an offset width for every randomPizzaContainer element, changed the width style directly instead
+* instead of retrieving the entire list of elements every time we want to access just one, moved the list retrieval so that it is retrieved once before the loop and store it in a variable that is used and accessed in the for loop
+* the new style width is calculated once based on the slider selection and then applied to all randomPizzaContainer elements
+
+For changing pizza positions on background:
+* retrieved the scrollTop value once instead of in the for loop
+* did a first pass to calculate all the positions
+* applied all new positions at once
+
+* TODO: further page load optimizations for funzies
 
 
 References
