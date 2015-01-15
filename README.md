@@ -22,10 +22,12 @@ References
 * https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 * http://yeoman.io/blog/performance-optimization.html
 
-## Other Resources
+### Other Resources
 * piazza forum
 * Udacity Course: Website Performance Optimization
 * Stack Overflow
+
+---
 
 Original Instructions
 =====================
