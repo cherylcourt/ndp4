@@ -17,8 +17,10 @@ Optimizations
 index.html
 ----------
 * removed what I thought were redundant styles in main.css like the following:
+
 > b, strong { font-weight: bold; }
 > pre, code { font-family: monospace, monospace; font-size: 1em; }
+
 * combined css elements, where possible
 * inlined css into html pages
 * scaled images to their view sizes
