@@ -391,14 +391,19 @@ var pizzaElementGenerator = function(i) {
   return pizzaContainer;
 };
 
+var resizePizzas = function(size) {
+  latestPizzaSize = size;
+  requestAnimation(false);
+};
+
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
-var resizePizzas = function(size) { 
+var updatePizzaSize = function() {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
   // Changes the value for the size of the pizza above the slider
   function changeSliderLabel(size) {
     var element = document.querySelector("#pizzaSize").innerHTML;
-    switch(size) {
+    switch(latestPizzaSize) {
       case "1":
         element = "Small";
         break;
@@ -414,8 +419,8 @@ var resizePizzas = function(size) {
   }
 
   // Changes the slider value to a percent width
-  function widthSwitcher (size) {
-    switch(size) {
+  function widthSwitcher() {
+    switch(latestPizzaSize) {
       case "1":
         return "25%";
       case "2":
@@ -429,24 +434,26 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths by updating the value of
   // its css width value
-  function changePizzaSizes(size) {
+  function changePizzaSizes() {
     var elements = document.querySelectorAll(".randomPizzaContainer"),
         numberOfElements = elements.length,
-        newWidth = widthSwitcher(size);
+        newWidth = widthSwitcher();
 
     for (var i = 0; i < numberOfElements; i++) {
       elements[i].style.width = newWidth;
     }
   }
 
-  changeSliderLabel(size);
-  changePizzaSizes(size);
+  changeSliderLabel();
+  changePizzaSizes();
 
   // User Timing API is awesome
   window.performance.mark("mark_end_resize");
   window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
   var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
   console.log("Time to resize pizzas: " + timeToResize[0].duration + "ms");
+
+  currentlyAnimating = false;
 };
 
 window.performance.mark("mark_start_generating"); // collect timing data
@@ -509,10 +516,37 @@ function updatePositions() {
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
   }
+  currentlyAnimating = false;
+}
+
+// trying to use requestAnimationFrame as per http://www.html5rocks.com/en/tutorials/speed/animations/
+var latestKnownScrollTop = 0,
+    latestPizzaSize = "2",
+    currentlyAnimating = false;
+
+function requestAnimation(updateBackgroundPizzas) {
+  if(!currentlyAnimating) {
+    if(updateBackgroundPizzas) {
+      requestAnimationFrame(updatePositions);
+    }
+    else {
+      requestAnimationFrame(updatePizzaSize);
+    }
+
+    currentlyAnimating = true;
+  }
+
+}
+
+
+
+function onScroll() {
+  latestKnownScrollTop = document.documentElement.scrollTop;
+  requestAnimation(true);
 }
 
 // runs updatePositions on scroll
-window.addEventListener('scroll', updatePositions);
+window.addEventListener('scroll', onScroll);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
