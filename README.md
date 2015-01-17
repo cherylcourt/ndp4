@@ -52,6 +52,14 @@ performance and perhaps it would help on certain machines (e.g. if they were slo
 
 * TODO: further page load optimizations for funzies
 
+Notes
+=====
+I think there are probably further opportunities for improvement such as only changing the items that are visible
+as well as possibly organizing some of the code into classes, but this would require considerable changes to the
+existing code, which I think are not really the point of this exercise.  Considering only elements that are truly
+visible would probably be easiest with the addition of jQuery, from what I can gather in looking into that option, 
+but also introduce an extra complexity when one scrolls the page (at least from the point of view of displaying
+the pizzas that change size) so I'll leave that idea alone for now.
 
 References
 ==========
