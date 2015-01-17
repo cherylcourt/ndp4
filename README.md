@@ -29,6 +29,7 @@ index.html
 * optimized images to reduce their file size
 * made analytics script loading asynchronous
 * added a media attribute to print.css
+* replaced google font with standard open sans font
 
 * TODO: minify html
 * TODO: minify print.css
