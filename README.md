@@ -81,6 +81,8 @@ References
 * http://yeoman.io/blog/performance-optimization.html
 * http://www.html5rocks.com/en/tutorials/speed/animations/
 * http://www.teamdf.com/web/194/jquery-element-onscreen-visibility
+* http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+* https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame
 
 ### Other Resources
 * piazza forum
