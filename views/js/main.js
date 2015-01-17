@@ -391,12 +391,21 @@ var pizzaElementGenerator = function(i) {
   return pizzaContainer;
 };
 
+/**
+ * Sets the latestPizzaSize and calls requestAnimation to update the size of the pizza for each menu item.
+ * This is called when the user selects a new pizza size with the slider in the "Our Pizzas" section.
+ *
+ * @param {string} size - the currently selected slider value (1, 2, or 3)
+ */
 var resizePizzas = function(size) {
   latestPizzaSize = size;
   requestAnimation(false);
 };
 
-// resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
+/**
+ * This function is called when resizePizzas is called and the page can be updated through requestAnimationFrame.
+ * The slider label is updated and the size of the pizza images are updated.
+ */
 var updatePizzaSize = function() {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
@@ -453,6 +462,7 @@ var updatePizzaSize = function() {
   var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
   console.log("Time to resize pizzas: " + timeToResize[0].duration + "ms");
 
+  // lets requestAnimation know that the next animation frame can take place
   currentlyAnimating = false;
 };
 
@@ -516,14 +526,34 @@ function updatePositions() {
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
   }
+
+  // lets requestAnimation know that the next animation frame can take place
   currentlyAnimating = false;
 }
 
 // trying to use requestAnimationFrame as per http://www.html5rocks.com/en/tutorials/speed/animations/
-var latestKnownScrollTop = 0,
-    latestPizzaSize = "2",
-    currentlyAnimating = false;
+/**
+ * @type {number} - the last known scroll top position; updated when the user scrolls
+ */
+var latestKnownScrollTop = 0;
 
+/**
+ * @type {string} - the last known selected pizza size selected; updated when the slider on the page moves
+ */
+var latestPizzaSize = "2";
+
+/**
+ * @type {boolean} - flag that indicates whether the page is in the middle of being updated using requestAnimationFrame
+ */
+var currentlyAnimating = false;
+
+/**
+ *
+ * @param {boolean} updateBackgroundPizzas - a boolean value indicating whether the background pizzas should be
+ *  updated; if true, the background pizzas will be updated, the pizza sizes on the menu will be updated otherwise
+ *
+ *  note: this could probably be improved with the use of classes as oppose to a series of functions and flags
+ */
 function requestAnimation(updateBackgroundPizzas) {
   if(!currentlyAnimating) {
     if(updateBackgroundPizzas) {
@@ -532,14 +562,15 @@ function requestAnimation(updateBackgroundPizzas) {
     else {
       requestAnimationFrame(updatePizzaSize);
     }
-
     currentlyAnimating = true;
   }
 
 }
 
-
-
+/**
+ * Updates the latestKnownScrollTop value and calls requestAnimation to update the background pizzas.
+ * Called when the page scrolls.
+ */
 function onScroll() {
   latestKnownScrollTop = document.documentElement.scrollTop;
   requestAnimation(true);

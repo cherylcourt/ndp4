@@ -45,6 +45,11 @@ For changing pizza positions on background:
 * did a first pass to calculate all the positions
 * applied all new positions at once
 
+* the calculation and display of animations were then wrapped in a call to requestAnimationFrame() after reading the information
+on (html5rocks)[http://www.html5rocks.com/en/tutorials/speed/animations/] regarding speeding up animations.  I did not
+really see any significant gains in performance, but thought I'd leave it in since it also didn't seem to hurt the
+performance and perhaps it would help on certain machines (e.g. if they were slower somehow?)
+
 * TODO: further page load optimizations for funzies
 
 
@@ -66,6 +71,8 @@ References
 * https://www.jetbrains.com/pycharm/webhelp/using-grunt-task-runner.html
 * https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 * http://yeoman.io/blog/performance-optimization.html
+* http://www.html5rocks.com/en/tutorials/speed/animations/
+* http://www.teamdf.com/web/194/jquery-element-onscreen-visibility
 
 ### Other Resources
 * piazza forum
