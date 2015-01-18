@@ -406,21 +406,20 @@ var resizePizzas = function(size) {
  * This function is called when resizePizzas is called and the page can be updated through requestAnimationFrame.
  * The slider label is updated and the size of the pizza images are updated.
  */
-var updatePizzaSize = function() {
+function updatePizzaSize() {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
   // Changes the value for the size of the pizza above the slider
-  function changeSliderLabel(size) {
-    var element = document.querySelector("#pizzaSize").innerHTML;
+  function changeSliderLabel() {
     switch(latestPizzaSize) {
       case "1":
-        element = "Small";
+        document.querySelector("#pizzaSize").innerHTML = "Small";
         break;
       case "2":
-        element = "Medium";
+        document.querySelector("#pizzaSize").innerHTML = "Medium";
         break;
       case "3":
-        element = "Large";
+        document.querySelector("#pizzaSize").innerHTML = "Large";
         break;
       default:
         console.log("bug in changeSliderLabel");
@@ -431,10 +430,13 @@ var updatePizzaSize = function() {
   function widthSwitcher() {
     switch(latestPizzaSize) {
       case "1":
+        changeSliderLabel("Small");
         return "25%";
       case "2":
+        changeSliderLabel("Medium");
         return "33.33%";
       case "3":
+        changeSliderLabel("Large");
         return "50%";
       default:
         console.log("bug in sizeSwitcher");
@@ -464,7 +466,7 @@ var updatePizzaSize = function() {
 
   // lets requestAnimation know that the next animation frame can take place
   currentlyAnimating = false;
-};
+}
 
 window.performance.mark("mark_start_generating"); // collect timing data
 
