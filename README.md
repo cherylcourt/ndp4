@@ -19,14 +19,14 @@ Build
 1. Install all necessary modules
 
 To build the minified project you will need to have the following installed:
-* npm \(download (node.js)[http://nodejs.org/]\)
-* (grunt)[http://gruntjs.com/getting-started]
-* (grunt-usemin)[https://www.npmjs.com/package/grunt-usemin]
-* (grunt-contrib-uglify)[https://www.npmjs.com/package/grunt-contrib-uglify]
-* (grunt-contrib-cssmin)[https://www.npmjs.com/package/grunt-contrib-cssmin]
-* (grunt-contrib-htmlmin)[https://www.npmjs.com/package/grunt-contrib-htmlmin]
-* (grunt-contrib-copy)[https://www.npmjs.com/package/grunt-contrib-copy]
-* (grunt-contrib-concat)[https://www.npmjs.com/package/grunt-contrib-concat]
+* npm (download [node.js](http://nodejs.org))
+* [grunt](http://gruntjs.com/getting-started)
+* [grunt-usemin](https://www.npmjs.com/package/grunt-usemin)
+* [grunt-contrib-uglify](https://www.npmjs.com/package/grunt-contrib-uglify)
+* [grunt-contrib-cssmin](https://www.npmjs.com/package/grunt-contrib-cssmin)
+* [grunt-contrib-htmlmin](https://www.npmjs.com/package/grunt-contrib-htmlmin)
+* [grunt-contrib-copy](https://www.npmjs.com/package/grunt-contrib-copy)
+* [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat)
 
 2. From the root project directory:
 ```bash
@@ -107,7 +107,7 @@ For changing pizza positions on background:
 * applied all new positions at once
 
 * the calculation and display of animations were then wrapped in a call to requestAnimationFrame() after reading the information
-on (html5rocks)[http://www.html5rocks.com/en/tutorials/speed/animations/] regarding speeding up animations.  I did not
+on [html5rocks](http://www.html5rocks.com/en/tutorials/speed/animations/) regarding speeding up animations.  I did not
 really see any significant gains in performance, but thought I'd leave it in since it also didn't seem to hurt the
 performance and perhaps it would help on certain machines (e.g. if they were slower somehow?)
 
@@ -156,5 +156,5 @@ anyway as I did a lot of reading since there seemed to be multiple avenues to po
 * piazza forum
 * Udacity Course: Website Performance Optimization
 * Stack Overflow
-* (Youtube: Grunt Usemin Plugin)[https://www.youtube.com/watch?v=gIbfDxF69c8]
+* [Youtube: Grunt Usemin Plugin](https://www.youtube.com/watch?v=gIbfDxF69c8)
 
