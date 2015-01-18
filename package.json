@@ -2,5 +2,14 @@
   "name": "nandodegree-project-4",
   "version": "0.0.1",
   "description": "The fourth project of the Udacity Front End Web Developer Nanodegree",
-  "author": "Cheryl Court <cheryl.court@gmail.com> (http://www.cherylcourt.ca/)"
+  "author": "Cheryl Court <cheryl.court@gmail.com> (http://www.cherylcourt.ca/)",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.11.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-usemin": "^3.0.0"
+  }
 }
