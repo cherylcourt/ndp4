@@ -11,11 +11,11 @@ Usage
 Navigate to page hosted on github.com [here](http://cherylcourt.github.io/ndp4/)
 
 Work
-====
+----
 After cloning the project, work in the files located in the src directory.
 
 Build
-=====
+-----
 1. Install all necessary modules.  
 
    To build the minified project you will need to have the following installed:
@@ -34,7 +34,7 @@ Build
     ```
 
 Structure
-=========
+---------
 * development files (i.e. originals) are in the _src_ directory
 * minified files start in the root directory
 
@@ -72,10 +72,9 @@ views  (files in this directory are not actually minified...just copied over)
 ```
 
 Optimizations
-=============
+-------------
 
-index.html
-----------
+### index.html
 * removed what I thought were redundant styles in main.css like the following:
 
     ```css
@@ -94,8 +93,7 @@ index.html
 * minified print.css
 * minified perfmatters.js
 
-views/js/main.js
-----------------
+### views/js/main.js
 For changing pizza image sizes:
 * instead of calculating an offset width for every randomPizzaContainer element, changed the width style directly instead
 * instead of retrieving the entire list of elements every time we want to access just one, moved the list retrieval so that it is retrieved once before the loop and store it in a variable that is used and accessed in the for loop
@@ -115,7 +113,7 @@ _note: due to the limitations of the grunt packages used and my understanding of
 were not minified and I thought leaving the project in its original directory structure would be easier for grading_
 
 Notes
-=====
+-----
 I think there are probably further opportunities for improvement such as only changing the items that are visible
 as well as possibly organizing some of the code into classes, but this would require considerable changes to the
 existing code, which I think are not really the point of this exercise.  Considering only elements that are truly
@@ -124,7 +122,7 @@ but also introduce an extra complexity when one scrolls the page (at least from 
 the pizzas that change size) so I'll leave that idea alone for now.
 
 References
-==========
+----------
 
 ### Websites
 
