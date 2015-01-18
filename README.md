@@ -10,6 +10,43 @@ Usage
 
 Navigate to page hosted on github.com [here](http://cherylcourt.github.io/ndp4/)
 
+Structure
+=========
+* development files (i.e. originals) are in the _src_ directory
+* minified files start in the root directory
+
+### Development:
+```
+src
+|-- index.html
+|-- project-2048.html
+|-- project-mobile.html
+|-- project-webperf.html
+|-- css
+|-- js
+|-- img
+ -- views
+    |-- pizza.html
+    |-- css
+    |-- js
+     -- images
+```
+
+### Minified:
+```
+index.html
+project-2048.html
+project-mobile.html
+project-webperf.html
+css
+js
+img
+views
+  |-- pizza.html
+  |-- css
+  |-- js
+   -- images
+```
 
 Optimizations
 =============
@@ -30,9 +67,9 @@ index.html
 * made analytics script loading asynchronous
 * added a media attribute to print.css
 * replaced google font with standard open sans font
-
-* TODO: minify html
-* TODO: minify print.css
+* minified html
+* minified print.css
+* minified perfmatters.js
 
 views/js/main.js
 ----------------
@@ -51,7 +88,8 @@ on (html5rocks)[http://www.html5rocks.com/en/tutorials/speed/animations/] regard
 really see any significant gains in performance, but thought I'd leave it in since it also didn't seem to hurt the
 performance and perhaps it would help on certain machines (e.g. if they were slower somehow?)
 
-* TODO: further page load optimizations for funzies
+_note: due to the limitations of the grunt packages used and my understanding of them the files in the views directory
+were not minified and I thought leaving the project in its original directory structure would be easier for grading_
 
 Notes
 =====
