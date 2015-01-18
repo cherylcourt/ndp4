@@ -16,18 +16,15 @@ After cloning the project, work in the files located in the src directory.
 
 Build
 =====
-1. Install all necessary modules
-
-To build the minified project you will need to have the following installed:
-* npm (download [node.js](http://nodejs.org))
-* [grunt](http://gruntjs.com/getting-started)
-* [grunt-usemin](https://www.npmjs.com/package/grunt-usemin)
-* [grunt-contrib-uglify](https://www.npmjs.com/package/grunt-contrib-uglify)
-* [grunt-contrib-cssmin](https://www.npmjs.com/package/grunt-contrib-cssmin)
-* [grunt-contrib-htmlmin](https://www.npmjs.com/package/grunt-contrib-htmlmin)
-* [grunt-contrib-copy](https://www.npmjs.com/package/grunt-contrib-copy)
-* [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat)
-
+1. Install all necessary modules.  To build the minified project you will need to have the following installed:
+..* npm (download [node.js](http://nodejs.org))
+..* [grunt](http://gruntjs.com/getting-started)
+..* [grunt-usemin](https://www.npmjs.com/package/grunt-usemin)
+..* [grunt-contrib-uglify](https://www.npmjs.com/package/grunt-contrib-uglify)
+..* [grunt-contrib-cssmin](https://www.npmjs.com/package/grunt-contrib-cssmin)
+..* [grunt-contrib-htmlmin](https://www.npmjs.com/package/grunt-contrib-htmlmin)
+..* [grunt-contrib-copy](https://www.npmjs.com/package/grunt-contrib-copy)
+..* [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat)
 2. From the root project directory:
 ```bash
 grunt build
