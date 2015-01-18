@@ -557,10 +557,10 @@ var currentlyAnimating = false;
 function requestAnimation(updateBackgroundPizzas) {
   if(!currentlyAnimating) {
     if(updateBackgroundPizzas) {
-      requestAnimationFrame(updatePositions);
+      window.requestAnimationFrame(updatePositions);
     }
     else {
-      requestAnimationFrame(updatePizzaSize);
+      window.requestAnimationFrame(updatePizzaSize);
     }
     currentlyAnimating = true;
   }
