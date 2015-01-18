@@ -66,6 +66,10 @@ References
 ==========
 
 ### Websites
+
+Some of the following websites I only read and didn't incorporate into the project, but felt I should list here
+anyway as I did a lot of reading since there seemed to be multiple avenues to possibly go down with this project:
+
 * http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/
 * https://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1
 * https://developer.mozilla.org/en-US/docs/Web/API/Element.classList
@@ -84,6 +88,7 @@ References
 * http://www.teamdf.com/web/194/jquery-element-onscreen-visibility
 * http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
 * https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame
+* https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=en
 
 ### Other Resources
 * piazza forum
