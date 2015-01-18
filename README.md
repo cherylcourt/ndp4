@@ -112,6 +112,7 @@ really see any significant gains in performance, but thought I'd leave it in sin
 performance and perhaps it would help on certain machines (e.g. if they were slower somehow?)
 * combined and minifed css files in views/css
 * minified pizza.html
+* scaled and optimized pizzeria.jpg -> pizzeria360x270.jpg
 
 Notes
 -----
