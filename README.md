@@ -27,6 +27,7 @@ Build
    * [grunt-contrib-htmlmin](https://www.npmjs.com/package/grunt-contrib-htmlmin)
    * [grunt-contrib-copy](https://www.npmjs.com/package/grunt-contrib-copy)
    * [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat)
+   * [grunt-processhtml](https://github.com/dciccale/grunt-processhtml)
 2. From the root project directory run the following:
 
     ```bash
@@ -64,7 +65,7 @@ project-webperf.html
 css
 js
 img
-views  (files in this directory are not actually minified...just copied over)
+views
   |-- pizza.html
   |-- css
   |-- js
@@ -97,6 +98,7 @@ For changing pizza image sizes:
 * instead of calculating an offset width for every randomPizzaContainer element, changed the width style directly instead
 * instead of retrieving the entire list of elements every time we want to access just one, moved the list retrieval so that it is retrieved once before the loop and store it in a variable that is used and accessed in the for loop
 * the new style width is calculated once based on the slider selection and then applied to all randomPizzaContainer elements
+* 'uglified' file and created main.min.js
 
 For changing pizza positions on background:
 * retrieved the scrollTop value once instead of in the for loop
@@ -108,9 +110,8 @@ Additional changes:
 on [html5rocks](http://www.html5rocks.com/en/tutorials/speed/animations/) regarding speeding up animations.  I did not
 really see any significant gains in performance, but thought I'd leave it in since it also didn't seem to hurt the
 performance and perhaps it would help on certain machines (e.g. if they were slower somehow?)
-
-_note: due to the limitations of the grunt packages used and my understanding of them the files in the views directory
-were not minified and I thought leaving the project in its original directory structure would be easier for grading_
+* combined and minifed css files in views/css
+* minified pizza.html
 
 Notes
 -----
