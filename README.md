@@ -27,7 +27,7 @@ Build
    * [grunt-contrib-htmlmin](https://www.npmjs.com/package/grunt-contrib-htmlmin)
    * [grunt-contrib-copy](https://www.npmjs.com/package/grunt-contrib-copy)
    * [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat)
-2. From the root project directory:
+2. From the root project directory run the following:
 
     ```bash
     grunt build
