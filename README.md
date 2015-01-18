@@ -149,6 +149,7 @@ anyway as I did a lot of reading since there seemed to be multiple avenues to po
 * http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
 * https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame
 * https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=en
+* http://stackoverflow.com/questions/16827858/npm-warn-package-json-no-repository-field
 
 ### Other Resources
 * piazza forum

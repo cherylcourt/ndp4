@@ -2,18 +2,18 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        //pkg: grunt.file.readJSON('package.json'),
-        htmlmin: {                                     // Task
-            main: {                                      // Target
-                options: {                                 // Target options
+        htmlmin: {
+            main: {
+                options: {
                     removeComments: true,
                     collapseWhitespace: true,
                     removeCommentsFromCDATA: true,
                     minifyJS: true,
                     minifyCSS: true
                 },
-                files: {                                   // Dictionary of files
-                    'index.html': 'index.html',     // 'destination': 'source'
+                files: {
+                     // 'destination': 'source'
+                    'index.html': 'index.html',
                     'project-2048.html': 'project-2048.html',
                     'project-mobile.html': 'project-mobile.html',
                     'project-webperf.html': 'project-webperf.html',
@@ -44,13 +44,34 @@ module.exports = function(grunt) {
             task0: {
                 files: [
                     {expand:true, cwd: 'src/img/', src:['**'], dest: 'img/'},
-                    {expand:true, cwd: 'src/views/', src:['**'], dest: 'views/'},
+                    {expand:true, cwd: 'src/views/images/', src:['**'], dest: 'views/images/'},
                     {src:'src/index.html', dest:'index.html'},
                     {src:'src/project-2048.html', dest:'project-2048.html'},
                     {src:'src/project-mobile.html', dest:'project-mobile.html'},
                     {src:'src/project-webperf.html', dest:'project-webperf.html'}
 
                 ]
+            }
+        },
+        cssmin: {
+            views: {
+                files: {
+                    'views/css/tidy.min.css': ['src/views/css/style.css', 'src/views/css/bootstrap-grid.css']
+                }
+            }
+        },
+        uglify: {
+            views: {
+                files: {
+                    'views/js/main.min.js': ['src/views/js/main.js']
+                }
+            }
+        },
+        processhtml: {
+            views: {
+                files: {
+                    'views/pizza.html': ['src/views/pizza.html']
+                }
             }
         }
     });
@@ -62,6 +83,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-processhtml');
 
     // build task(s).
     grunt.registerTask('build', [
@@ -71,6 +93,7 @@ module.exports = function(grunt) {
         'cssmin',
         'uglify',
         'usemin',
+        'processhtml',
         'htmlmin'
     ]);
 
