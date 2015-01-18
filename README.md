@@ -41,7 +41,7 @@ project-webperf.html
 css
 js
 img
-views
+views  (files in this directory are not actually minified...just copied over)
   |-- pizza.html
   |-- css
   |-- js
