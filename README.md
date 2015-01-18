@@ -81,7 +81,6 @@ Optimizations
     b, strong { font-weight: bold; }
     pre, code { font-family: monospace, monospace; font-size: 1em; }
     ```
-
 * combined css elements, where possible
 * inlined css into html pages
 * scaled images to their view sizes
@@ -104,6 +103,7 @@ For changing pizza positions on background:
 * did a first pass to calculate all the positions
 * applied all new positions at once
 
+Additional changes:
 * the calculation and display of animations were then wrapped in a call to requestAnimationFrame() after reading the information
 on [html5rocks](http://www.html5rocks.com/en/tutorials/speed/animations/) regarding speeding up animations.  I did not
 really see any significant gains in performance, but thought I'd leave it in since it also didn't seem to hurt the
