@@ -28,9 +28,9 @@ Build
    * [grunt-contrib-copy](https://www.npmjs.com/package/grunt-contrib-copy)
    * [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat)
 2. From the root project directory:
-```bash
-grunt build
-```
+    ```bash
+    grunt build
+    ```
 
 Structure
 =========
